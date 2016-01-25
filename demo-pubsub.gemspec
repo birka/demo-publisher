@@ -1,15 +1,15 @@
 # -*- encoding: utf-8 -*-
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
-require 'demo-publisher/version'
+require 'demo-pubsub/version'
 Gem::Specification.new do |s|
-  s.name = 'demo-publisher'
+  s.name = 'demo-pubsub'
   s.version = DemoPublisher::VERSION
   s.authors = ['Christoph Lukas', 'Alexander Birk']
   s.email = ['info@pingworks.de']
   s.homepage = ''
-  s.summary = 'Demo Publisher'
-  s.description = 'Demo Publisher'
-  s.rubyforge_project = 'demo-publisher'
+  s.summary = 'Demo Pubsub'
+  s.description = 'Demo Pubsub'
+  s.rubyforge_project = 'demo-pubsub'
   s.files = `git ls-files`.split('\n')
   s.test_files = `git ls-files -- {test,spec,features}/*`.split('\n')
   s.executables = `git ls-files -- bin/*`.split('\n').map { |f| File.basename(f) }

@@ -1,0 +1,10 @@
+Metrics/LineLength:
+  Max: 150
+
+Style/GlobalVars:
+  Exclude:
+    - 'test/integration/default/serverspec/spec_helper.rb'
+
+Style/SingleSpaceBeforeFirstArg:
+  Exclude:
+    - 'metadata.rb'
