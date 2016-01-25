@@ -1,0 +1,10 @@
+name             'env_demo'
+maintainer       'birk'
+maintainer_email 'info@pingworks.de'
+license          'Apache 2.0'
+description      'Installs and configures env_demo'
+long_description 'Installs and configures env_demo'
+version          '0.1.0'
+
+depends 'demo_rabbitmq'
+depends 'demo_couchdb'

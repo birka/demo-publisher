@@ -1,0 +1,29 @@
+---
+driver:
+  name: vagrant
+  customize:
+    memory: 4096
+    vram: 64
+    natdnshostresolver1: "on"
+    natdnsproxy1: "on"
+    nictype1: "virtio"
+
+provisioner:
+  name: chef_solo
+  require_chef_omnibus: false
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+        gui: true
+        box: pingworks_ubuntu-14.04_chef-12.4.1-1
+        box_url: http://vagrant.pingworks.net/pingworks_ubuntu-14.04_chef-12.4.1-1.box
+        network:
+          - [ 'forwarded_port', { guest: 15672, host: 15672 } ]
+          - [ 'forwarded_port', { guest: 5672, host: 5672 } ]
+          - [ 'forwarded_port', { guest: 5984, host: 5984 } ]
+suites:
+  - name: default
+    run_list:
+    - recipe[env_demo::default]
+    attributes:
