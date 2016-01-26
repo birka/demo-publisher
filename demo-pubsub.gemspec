@@ -3,7 +3,7 @@ $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 require 'demo-pubsub/version'
 Gem::Specification.new do |s|
   s.name = 'demo-pubsub'
-  s.version = DemoPublisher::VERSION
+  s.version = DemoPubsub::VERSION
   s.authors = ['Christoph Lukas', 'Alexander Birk']
   s.email = ['info@pingworks.de']
   s.homepage = ''
@@ -16,4 +16,5 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
   s.add_runtime_dependency 'bunny'
   s.add_runtime_dependency 'logstash-logger'
+  s.add_runtime_dependency 'couchrest'
 end
